@@ -5006,13 +5006,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino-abstract-transport@npm:^1.0.0, pino-abstract-transport@npm:v1.0.0":
+"pino-abstract-transport@npm:^1.0.0":
   version: 1.0.0
   resolution: "pino-abstract-transport@npm:1.0.0"
   dependencies:
     readable-stream: ^4.0.0
     split2: ^4.0.0
   checksum: 05dd0eda52dd99fd204b39fe7b62656744b63e863bc052cdd5105d25f226a236966d0a46e39a1ace4838f6e988c608837ff946d2d0bc92835ca7baa0a3bff8d8
+  languageName: node
+  linkType: hard
+
+"pino-abstract-transport@npm:v1.1.0":
+  version: 1.1.0
+  resolution: "pino-abstract-transport@npm:1.1.0"
+  dependencies:
+    readable-stream: ^4.0.0
+    split2: ^4.0.0
+  checksum: cc84caabee5647b5753ae484d5f63a1bca0f6e1791845e2db2b6d830a561c2b5dd1177720f68d78994c8a93aecc69f2729e6ac2bc871a1bf5bb4b0ec17210668
   languageName: node
   linkType: hard
 
@@ -5047,14 +5057,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino@npm:^8.14.2":
-  version: 8.14.2
-  resolution: "pino@npm:8.14.2"
+"pino@npm:^8.15.7":
+  version: 8.15.7
+  resolution: "pino@npm:8.15.7"
   dependencies:
     atomic-sleep: ^1.0.0
     fast-redact: ^3.1.1
     on-exit-leak-free: ^2.1.0
-    pino-abstract-transport: v1.0.0
+    pino-abstract-transport: v1.1.0
     pino-std-serializers: ^6.0.0
     process-warning: ^2.0.0
     quick-format-unescaped: ^4.0.3
@@ -5064,7 +5074,7 @@ __metadata:
     thread-stream: ^2.0.0
   bin:
     pino: bin.js
-  checksum: 9b777472be2d57a3120f7fd39090d04eacd3af1b25d74ebf606defb9c34fd587820f91ca12bfe52e61330e5fd9f72f67db98293c0ff8c77893e855a65f1dadf0
+  checksum: f66a75be09b242d7b2f10ad4113fefbed673ecf5c99dbcdce948e573703732b55e96d3c562591ef61651297289301af59b1ce2b1bea992a05012d613e17da931
   languageName: node
   linkType: hard
 
@@ -5629,7 +5639,7 @@ __metadata:
     listhen: ^1.2.2
     msw: ^1.2.3
     node-fetch: ^3.3.2
-    pino: ^8.14.2
+    pino: ^8.15.7
     pino-pretty: ^10.2.0
     prettier: ^3.0.1
     typescript: ^5.1.6
