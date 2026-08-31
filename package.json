@@ -3,7 +3,7 @@
   "author": "Speckle Systems",
   "version": "0.0.0",
   "description": "Speckle Automate Github Action",
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@4.14.1",
   "license": "Apache-2.0",
   "main": "lib/main.js",
   "type": "module",
@@ -11,7 +11,7 @@
     "all": "yarn run build && yarn run prettier:check && yarn run lint && yarn run package",
     "build": "tsc -p tsconfig.json",
     "build:image": "docker build -t speckle/speckle-automate-github-action:local .",
-    "lint": "eslint src/**/*.ts",
+    "lint": "eslint src/**/*.ts tests/**/*.ts",
     "package": "ncc build --target es2020 --source-map --license licenses.txt -o dist/action src/main.ts",
     "precommit": "pre-commit run --all-files",
     "prettier:check": "prettier --check '**/*.ts'",
@@ -25,7 +25,9 @@
   "dependencies": {
     "@actions/core": "^1.10.1",
     "@lifeomic/attempt": "^3.0.3",
+    "ajv": "^8.20.0",
     "node-fetch": "^3.3.2",
+    "string-argv": "^0.3.2",
     "zod": "^3.22.3"
   },
   "devDependencies": {
@@ -33,8 +35,8 @@
     "@types/node": "^18.19.17",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.9.0",
-    "@vercel/ncc": "^0.38.1",
-    "@vitest/coverage-istanbul": "^1.6.0",
+    "@vercel/ncc": "^0.44.0",
+    "@vitest/coverage-istanbul": "^4.1.9",
     "eslint": "^8.56.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
@@ -48,7 +50,7 @@
     "msw": "^2.3.0",
     "prettier": "^3.2.5",
     "typescript": "^5.2.2",
-    "vite": "^5.1.8",
-    "vitest": "^1.6.0"
+    "vite": "^8.0.16",
+    "vitest": "^4.1.9"
   }
 }
